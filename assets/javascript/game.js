@@ -7,7 +7,7 @@
         // ... if the answer is incorrect the timed screen displays an image with the text saying your guess was incorrect as well as give the correct answer
 // at the end of the game your correct and incorrect answers are displayed on the screen with a [start over] button
 
-var timerNumber = 5;
+var timerNumber = 30;
 
 var intervalId;
 
@@ -26,25 +26,38 @@ var questions = [
         questionText: "Which house does Harry Potter belong to?",
         options: ["Slytherin", "Gryffindor", "Hufflepuff", "Ravenclaw"],
         correctOption: 1,
-        // TODO: add images to questions
-        image: "assets/images/gryffindorCrest.jpg"
+        image: "assets/images/gryffindor.gif"
     },
     {
-        questionText: "Who won the 'House Cup' in The Philosopher's Stone?",
-        options: ["Slytherin", "Gryffindor", "Hufflepuff", "Ravenclaw"],
-        correctOption: 1,
-        image: "assets/images/gryffindorCrest.jpg"
+        questionText: "How old was Nicholas Flamel, when he decided to destroy the Philosopher's Stone",
+        options: ["789", "532", "665", "934"],
+        correctOption: 2,
+        image: "assets/images/amused.gif"
+    },
+    {
+        questionText: "How many staircases does Hogwarts have?",
+        options: ["142", "145", "167", "203"],
+        correctOption: 0,
+        image: "assets/images/notBad.gif"
+    },
+    {
+        questionText: "What food does Harry smell in the love potion Amortencia?",
+        options: ["Lemon Drops", "Hagrid's Rock Cakes", "Cockroach Clusters", "Treacle Tart"],
+        correctOption: 3,
+        image: "assets/images/food.gif"
+    },
+    {
+        questionText: "Who won the 'House Cup' in 'Philosopher's Stone?",
+        options: ["Ravenclaw", "Hufflepuff", "Gryffindor", "Slytherin"],
+        correctOption: 2,
+        image: "assets/images/really.gif"
+    },
+    {
+        questionText: "What did Harry give to dobby to set him free?",
+        options: ["Hat", "Shoes", "Sock", "Tie"],
+        correctOption: 2,
+        image: "assets/images/sock.gif"
     }
-    // {
-    //     questionText: "how many apricots",
-    //     options: ["3", "4", "2", "5"],
-    //     correctOption: "3"
-    // },
-    // {
-    //     questionText: "how many titties",
-    //     options: ["3", "4", "2", "5"],
-    //     correctOption: "5"
-    // }
 ];
 
 
@@ -64,7 +77,7 @@ function gameStart(){
         intervalId = setInterval(decrement, 1000);
         // setting the running value to true
         running = true;
-        timerNumber = 5;
+        timerNumber = 30;
         $("#timeSpan").text(timerNumber + " seconds");
         $("#timerDiv, #questionsPage").show();
         $("#answerPage").hide();
@@ -116,7 +129,7 @@ function gameEnd(){
     $("#0").text("Correct Answers: " + correctAnswers);
     $("#1").text("Incorrect Answers: " + incorrectAnswers);
     $("#2").text("Unanswered Qustions: " + unanswered);
-    $("#3").empty();
+    $("#3").html("<img src=\"assets/images/wellDone.gif\">");
     $("#answerPage").hide();
     $("#timerDiv, #questionsPage, #startOverButtonDiv" ).show();
     variableValueReset();
@@ -131,7 +144,7 @@ function displayAnswer(){
     stop();
     // time the page is on the screen for
     // a settimeout function starts counting in the background leaving this screen on for that set amout of time and moving onto the next page after its done
-    setTimeout(gameStart, 2000);
+    setTimeout(gameStart, 5000);
     // The answer will fill in the correctAnswer div
     // the currentQuestions is the structure that contains options and correct options
     $("#correctAnswer").text(currentQuestion.options[currentQuestion.correctOption]);

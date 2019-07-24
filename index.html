@@ -15,27 +15,30 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-image: url(assets/images/backgroundImage.jpg); background-size: 100% 100%;" alt="background-image">
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron vertical-center" style="background: none">
 
         <div class="container">
 
             <div id="titleDiv" class="text-center">
 
-                <h1>Harry Potter Trivia</h1>
+                <h1></h1>
 
             </div>
 
             <div id="timerDiv" class="text-center">
 
-                <h2>Time Remaining: <span id="timeSpan"></span></h2>
+                <h2>Time Remaining: <br>
+                    <span id="timeSpan">
+                    </span>
+                </h2>
 
             </div>
 
             <div id="startButtonDiv" class="text-center">
 
-                <button val="Start">Start</button>
+                <button class="buttonStyle" val="Start">Click to Start!</button>
 
             </div>
 
@@ -43,31 +46,31 @@
 
                 <div class="text-center">
 
-                    <h2 id="triviaQuestion">qd</h2>
+                    <h2 id="triviaQuestion"></h2>
 
                 </div>
 
                 <div class="text-center">
 
-                    <h2 id="0" class="answerSelection">0</h2>
+                    <h2 id="0" class="answerSelection"></h2>
 
                 </div>
 
                 <div class="text-center">
 
-                    <h2 id="1" class="answerSelection">1</h2>
+                    <h2 id="1" class="answerSelection"></h2>
 
                 </div>
 
                 <div class="text-center">
 
-                    <h2 id="2" class="answerSelection">2</h2>
+                    <h2 id="2" class="answerSelection"></h2>
 
                 </div>
 
                 <div class="text-center">
 
-                    <h2 id="3" class="answerSelection">3</h2>
+                    <h2 id="3" class="answerSelection"></h2>
 
                 </div>
 
@@ -77,13 +80,13 @@
 
                 <div class="text-center">
 
-                    <h2 id="answerAlert">AA</h2>
+                    <h2 id="answerAlert"></h2>
 
                 </div>
 
                 <div class="text-center">
 
-                    <h2 id="correctAnswer">ca</h2>
+                    <h2 id="correctAnswer"></h2>
 
                 </div>
 
@@ -95,7 +98,7 @@
 
             <div id="startOverButtonDiv" class="text-center">
 
-                <button val="StartOver">Start Over?</button>
+                <button class="buttonStyle" val="StartOver">Start Over?</button>
 
             </div>
 
